@@ -1,20 +1,110 @@
-import { Box, VStack } from '@chakra-ui/react';
+import { CgMenu } from 'react-icons/cg';
 
+import { useTheme } from '@/pages';
+import forest from '@/theme/ColorTheme/forest';
+import sea from '@/theme/ColorTheme/sea';
+import space from '@/theme/ColorTheme/space';
+import {
+  Box,
+  BoxProps,
+  HStack,
+  Icon,
+  IconButton,
+  Menu,
+  MenuButton,
+  MenuList,
+  useDisclosure,
+  VStack,
+} from '@chakra-ui/react';
+
+import ForestIcon from '../../icons/forest-icon';
+import SeaIcon from '../../icons/sea-icon';
+import SpaceIcon from '../../icons/space-icon';
 import NavigationDot from './navigation-dot';
 
-export default function Navigation() {
+interface NavigationProps extends BoxProps {
+  currentBloc: number;
+}
+
+export default function Navigation({
+  currentBloc,
+  ...restProps
+}: NavigationProps) {
+  const { changeTheme } = useTheme();
+  const { onOpen, onClose, isOpen } = useDisclosure();
+
   return (
-    <Box position='absolute' top={10} right={-10}>
-      <VStack spacing={5}>
-        <NavigationDot isActive={false} sectionTitle='Accueil' />
-        <NavigationDot isActive={true} sectionTitle='À propos de moi' />
+    <Box position='absolute' top={20} right={-10} zIndex={10} {...restProps}>
+      <HStack justifyContent='flex-end' mb={5}>
+        <Menu isOpen={isOpen} onOpen={onOpen} onClose={onClose}>
+          <MenuButton
+            as={IconButton}
+            aria-label='Options'
+            icon={<Icon as={CgMenu} boxSize={6} />}
+            variant='ghost'
+            color={`bloc${currentBloc}.menu`}
+          />
+          <MenuList p={4} bgColor='primary.50'>
+            <HStack spacing={2} justifyContent='space-between'>
+              <Box
+                onClick={() => {
+                  changeTheme(space);
+                  onClose();
+                }}
+              >
+                <SpaceIcon />
+              </Box>
+              <Box
+                onClick={() => {
+                  changeTheme(sea);
+                  onClose();
+                }}
+              >
+                <SeaIcon />
+              </Box>
+              <Box
+                onClick={() => {
+                  changeTheme(forest);
+                  onClose();
+                }}
+              >
+                <ForestIcon />
+              </Box>
+            </HStack>
+          </MenuList>
+        </Menu>
+      </HStack>
+      <VStack spacing={5} mr={2}>
         <NavigationDot
-          isActive={false}
+          currentBloc={currentBloc}
+          isActive={currentBloc === 0 ? true : false}
+          sectionTitle='Accueil'
+        />
+        <NavigationDot
+          currentBloc={currentBloc}
+          isActive={currentBloc === 1 ? true : false}
+          sectionTitle='À propos de moi'
+        />
+        <NavigationDot
+          currentBloc={currentBloc}
+          isActive={currentBloc === 2 ? true : false}
           sectionTitle='Expériences & formations'
         />
-        <NavigationDot isActive={false} sectionTitle='Technologies' />
-        <NavigationDot isActive={false} sectionTitle='Projets' />
-        <NavigationDot isActive={false} sectionTitle='Contact' />
+        <NavigationDot
+          currentBloc={currentBloc}
+          isActive={currentBloc === 3 ? true : false}
+          sectionTitle='Technologies'
+        />
+        <NavigationDot
+          currentBloc={currentBloc}
+          isActive={currentBloc === 4 ? true : false}
+          sectionTitle='Projets'
+        />
+        <NavigationDot
+          currentBloc={currentBloc}
+          isActive={currentBloc === 5 ? true : false}
+          sectionTitle='Contact'
+        />
       </VStack>
     </Box>
   );

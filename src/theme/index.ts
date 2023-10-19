@@ -19,6 +19,12 @@ const theme = {
         link: 'primary.600',
         tooltip: 'primary.300',
       },
+      bloc0: {
+        navigation: 'primary.50',
+        activeNavigation: 'primary.500',
+        text: 'general.white',
+        menu: 'general.white',
+      },
       bloc1: {
         default: 'primary.600',
         title: 'primary.800',
@@ -26,6 +32,8 @@ const theme = {
         icons: 'primary.900',
         navigation: 'primary.800',
         activeNavigation: 'primary.500',
+        text: 'general.black',
+        menu: 'primary.900',
       },
       portrait: {
         ellipse: 'primary.900',
