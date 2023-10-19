@@ -1,3 +1,36 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": ["next/core-web-vitals", "plugin:unicorn/recommended"],
+  "plugins": ["@typescript-eslint", "unused-imports"],
+  "rules": {
+    "@typescript-eslint/no-explicit-any": "error",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      { "argsIgnorePattern": "^_", "ignoreRestSiblings": true }
+    ],
+    "no-nested-ternary": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react/no-unescaped-entities": "off",
+    "unicorn/prevent-abbreviations": [
+      "error",
+      {
+        "replacements": {
+          "params": false,
+          "props": {
+            "properties": false
+          },
+          "ref": false,
+          "req": false,
+          "res": false
+        }
+      }
+    ],
+    "unicorn/no-nested-ternary": "off",
+    "unicorn/no-null": "off",
+    "unicorn/no-useless-undefined": "off",
+    "unicorn/switch-case-braces": ["error", "avoid"],
+    "unused-imports/no-unused-imports": "error",
+    "unused-imports/no-unused-vars": "off"
+  },
+  "reportUnusedDisableDirectives": true
 }
