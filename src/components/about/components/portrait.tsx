@@ -1,3 +1,4 @@
+import useMobile from '@/hooks/useMobile';
 import { useTheme } from '@/pages';
 import { Box } from '@chakra-ui/react';
 
@@ -13,13 +14,8 @@ import TraitHaut from './portrait-components/trait-haut';
 
 export default function Portait() {
   const { activeColorTheme } = useTheme();
-
   return (
-    <Box
-      style={{
-        perspective: '10px',
-      }}
-    >
+    <Box>
       <svg
         width='228'
         height='245'

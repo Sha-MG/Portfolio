@@ -1,4 +1,4 @@
-import { Container } from '@chakra-ui/react';
+import { Box, Container } from '@chakra-ui/react';
 
 import Navigation from './components/navigation';
 import Title from './components/title';
@@ -16,11 +16,18 @@ export default function Bloc({
   children,
 }: BlocProps) {
   return (
-    <Container minW='container.xl' flex={1} position='relative'>
+    <Box w='full' position='relative'>
+      <Container
+        w={{ base: 'full', md: 'container.xl' }}
+        flex={1}
+        position='relative'
+        px={{ base: 4, md: 0 }}
+      >
+        <TopTransition color={topTransitionColor} />
+        <Title title='À propos de moi' />
+        {children}
+      </Container>
       <Navigation currentBloc={currentBloc} />
-      <TopTransition color={topTransitionColor} />
-      <Title title='À propos de moi' />
-      {children}
-    </Container>
+    </Box>
   );
 }

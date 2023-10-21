@@ -11,9 +11,13 @@ import { Box, HStack } from '@chakra-ui/react';
 
 export default function Passions() {
   return (
-    <Box w='container.md'>
+    <Box w={{ base: 'full', lg: 'container.md' }}>
       <SmallTitle title='Mes passions' />
-      <HStack w='full' justifyContent='space-between'>
+      <HStack
+        w='full'
+        justifyContent={{ base: 'center', md: 'space-between' }}
+        flexWrap='wrap'
+      >
         <Painting />
         <Drawing />
         <Animals />

@@ -3,5 +3,17 @@ interface CircleProps {
 }
 
 export default function Circle({ color }: CircleProps) {
-  return <ellipse cx='122' cy='122' rx='106' ry='107' fill={color} />;
+  return (
+    <ellipse
+      cx='122'
+      cy='122'
+      rx='106'
+      ry='107'
+      fill={color}
+      style={{
+        transform: 'translateZ(-30px)',
+        WebkitTransform: 'translateZ(-30px)',
+      }}
+    />
+  );
 }

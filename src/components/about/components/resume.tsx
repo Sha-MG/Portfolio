@@ -7,10 +7,17 @@ import Portait from './portrait';
 
 export default function Resume() {
   return (
-    <HStack spacing={20}>
+    <Stack
+      spacing={{ base: 5, lg: 20 }}
+      alignItems='center'
+      w='full'
+      direction={{ base: 'column', lg: 'row' }}
+    >
       <Portait />
       <Stack>
-        <Heading as='h1'>Morgane Gamory</Heading>
+        <Heading as='h1' textAlign={{ base: 'center', lg: 'left' }}>
+          Morgane Gamory
+        </Heading>
         <HStack>
           <Icon as={IoMdCode} boxSize={6} color='bloc1.icons' />
           <Text>Développeuse web front-end</Text>
@@ -28,6 +35,6 @@ export default function Resume() {
           <Text>Paris</Text>
         </HStack>
       </Stack>
-    </HStack>
+    </Stack>
   );
 }

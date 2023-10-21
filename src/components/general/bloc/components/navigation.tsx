@@ -1,5 +1,6 @@
 import { CgMenu } from 'react-icons/cg';
 
+import useMobile from '@/hooks/useMobile';
 import { useTheme } from '@/pages';
 import forest from '@/theme/ColorTheme/forest';
 import sea from '@/theme/ColorTheme/sea';
@@ -30,12 +31,21 @@ export default function Navigation({
   currentBloc,
   ...restProps
 }: NavigationProps) {
+  const isMobile = useMobile();
   const { changeTheme } = useTheme();
   const { onOpen, onClose, isOpen } = useDisclosure();
 
   return (
-    <Box position='absolute' top={20} right={-10} zIndex={10} {...restProps}>
-      <HStack justifyContent='flex-end' mb={5}>
+    <Box
+      position='absolute'
+      zIndex={10}
+      top={20}
+      {...(isMobile ? { left: 2 } : { right: 6 })}
+      h='fit-content'
+      w='fit-content'
+      {...restProps}
+    >
+      <HStack justifyContent={isMobile ? 'flex-start' : 'flex-end'} mb={5}>
         <Menu isOpen={isOpen} onOpen={onOpen} onClose={onClose}>
           <MenuButton
             as={IconButton}
@@ -74,7 +84,7 @@ export default function Navigation({
           </MenuList>
         </Menu>
       </HStack>
-      <VStack spacing={5} mr={2}>
+      <VStack spacing={5} {...(isMobile ? { ml: 2 } : { mr: 2 })}>
         <NavigationDot
           currentBloc={currentBloc}
           isActive={currentBloc === 0 ? true : false}

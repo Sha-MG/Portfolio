@@ -18,7 +18,7 @@ export default function AboutMe() {
 
   return (
     <Bloc topTransitionColor={strokeColor} currentBloc={1}>
-      <VStack spacing={5}>
+      <VStack spacing={{ base: 8, md: 10, lg: 5 }}>
         <Resume />
         <Presentation />
         <Passions />

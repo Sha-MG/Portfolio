@@ -3,7 +3,7 @@ import { Text, VStack } from '@chakra-ui/react';
 
 export default function Presentation() {
   return (
-    <VStack w='container.md'>
+    <VStack w={{ base: 'full', lg: 'container.md' }}>
       <Text>Salut, moi c’est Morgane, </Text>
       <Text textAlign='justify'>
         Une développeuse web & mobile avec un parcours riche et une soif
