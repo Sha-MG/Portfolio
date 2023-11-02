@@ -7,12 +7,14 @@ interface NavigationDotProps {
   currentBloc: number;
   isActive: boolean;
   sectionTitle: string;
+  color?: string;
 }
 
 export default function NavigationDot({
   currentBloc,
   isActive,
   sectionTitle,
+  color,
 }: NavigationDotProps) {
   const [isHovered, setIsHovered] = React.useState(false);
   const isMobile = useMobile();
@@ -21,11 +23,11 @@ export default function NavigationDot({
     <Box position='relative' alignSelf={{ base: 'flex-start', md: 'flex-end' }}>
       <Circle
         borderWidth={1}
-        borderColor={`bloc${currentBloc}.navigation`}
+        borderColor={color ?? `bloc${currentBloc}.navigation`}
         size={6}
       />
       <Circle
-        bg={`bloc${currentBloc}.activeNavigation`}
+        bg={color ?? `bloc${currentBloc}.activeNavigation`}
         size={2}
         position='absolute'
         top='2'
@@ -43,7 +45,7 @@ export default function NavigationDot({
           <Circle
             onMouseOver={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
-            bg={`bloc${currentBloc}.navigation`}
+            bg={color ?? `bloc${currentBloc}.navigation`}
             size={3}
             ml={1}
             transition='all 0.3s ease-in-out'
@@ -55,7 +57,7 @@ export default function NavigationDot({
             _hover={{ cursor: 'default' }}
             fontSize='xs'
             textTransform='uppercase'
-            color={`bloc${currentBloc}.text`}
+            color={color ?? `bloc${currentBloc}.text`}
           >
             {sectionTitle}
           </Text>
@@ -68,7 +70,7 @@ export default function NavigationDot({
             _hover={{ cursor: 'default' }}
             fontSize='xs'
             textTransform='uppercase'
-            color={`bloc${currentBloc}.text`}
+            color={color ?? `bloc${currentBloc}.text`}
           >
             {sectionTitle}
           </Text>
@@ -76,7 +78,7 @@ export default function NavigationDot({
             mr={1}
             onMouseOver={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
-            bg={`bloc${currentBloc}.navigation`}
+            bg={color ?? `bloc${currentBloc}.navigation`}
             size={4}
             transition='all 0.3s ease-in-out'
             _hover={{ transform: 'scale(0.7)', cursor: 'pointer' }}

@@ -25,30 +25,19 @@ export default function EtoilesLayer2() {
         xmlns='http://www.w3.org/2000/svg'
       >
         <circle cx='1191' cy='560' r='5' fill='#F7F7F7' />
-        {/* <circle cx='138' cy='417' r='5' fill='#F7F7F7' /> */}
-        {/* <circle cx='886' cy='384' r='5' fill='#F7F7F7' /> */}
         <circle cx='1478' cy='356' r='5' fill='#F7F7F7' />
         <circle cx='1937.5' cy='326.5' r='2.5' fill='#F7F7F7' />
-        {/* <circle cx='515.5' cy='310.5' r='2.5' fill='#F7F7F7' /> */}
         <circle cx='1728.5' cy='101.5' r='2.5' fill='#F7F7F7' />
         <circle cx='553.5' cy='509.5' r='2.5' fill='#F7F7F7' />
-        {/* <circle cx='598.5' cy='240.5' r='2.5' fill='#F7F7F7' /> */}
         <circle cx='1030.5' cy='186.5' r='2.5' fill='#F7F7F7' />
-        {/* <circle cx='2000.5' cy='191.5' r='2.5' fill='#F7F7F7' /> */}
         <circle cx='845.5' cy='211.5' r='2' stroke='#F7F7F7' />
         <circle cx='479.5' cy='89.5' r='2.5' fill='#F7F7F7' />
-        {/* <circle cx='944.5' cy='127.5' r='7.5' fill='#F7F7F7' /> */}
-        {/* <circle cx='2194.5' cy='519.5' r='7.5' fill='#F7F7F7' /> */}
         <circle cx='153.5' cy='7.5' r='7.5' fill='#F7F7F7' />
         <circle cx='1535.5' cy='212.5' r='7' stroke='#F7F7F7' />
         <circle cx='2237.5' cy='191.5' r='7' stroke='#F7F7F7' />
-        {/* <circle cx='1756' cy='482' r='4.5' stroke='#F7F7F7' />
-    <circle cx='1278' cy='84' r='4.5' stroke='#F7F7F7' /> */}
+        <circle cx='1278' cy='84' r='4.5' stroke='#F7F7F7' />
         <circle cx='672' cy='35' r='5' fill='#F7F7F7' />
         <circle cx='1541' cy='5' r='5' fill='#F7F7F7' />
-        {/* <circle cx='1633.5' cy='598.5' r='7' stroke='#F7F7F7' />
-    <circle cx='22.5' cy='198.5' r='7' stroke='#F7F7F7' />
-    <circle cx='298.5' cy='454.5' r='7' stroke='#F7F7F7' /> */}
         <circle cx='1911.5' cy='32.5' r='7.5' fill='#F7F7F7' />
       </svg>
     </Center>

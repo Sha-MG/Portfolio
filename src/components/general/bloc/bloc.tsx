@@ -16,7 +16,7 @@ export default function Bloc({
   children,
 }: BlocProps) {
   return (
-    <Box w='full' position='relative'>
+    <Box w='full' position='relative' background='#F7F7F7' zIndex={10}>
       <Container
         w={{ base: 'full', md: 'container.xl' }}
         flex={1}

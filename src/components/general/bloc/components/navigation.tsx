@@ -25,10 +25,12 @@ import NavigationDot from './navigation-dot';
 
 interface NavigationProps extends BoxProps {
   currentBloc: number;
+  color?: string;
 }
 
 export default function Navigation({
   currentBloc,
+  color,
   ...restProps
 }: NavigationProps) {
   const isMobile = useMobile();
@@ -38,7 +40,7 @@ export default function Navigation({
   return (
     <Box
       position='absolute'
-      zIndex={10}
+      zIndex={50}
       top={20}
       {...(isMobile ? { left: 2 } : { right: 6 })}
       h='fit-content'

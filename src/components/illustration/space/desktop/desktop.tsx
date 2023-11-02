@@ -3,6 +3,7 @@ import { useParallax } from 'react-scroll-parallax';
 
 import { Box, Center, HStack } from '@chakra-ui/react';
 
+import TransitionIllustrationBloc from '../../transition';
 import Curiosité from './curiosite';
 import Etoiles from './etoiles';
 import EtoilesLayer1 from './etoiles-layer1';
@@ -27,7 +28,6 @@ import TraitsVitesse3 from './traits-3';
 import TraitsVitesse4 from './traits-4';
 import TraitsFuseeDroite from './traits-fusee-droite';
 import TraitsFuseeGauche from './traits-fusee-gauche';
-import TransitionIllustrationBloc from './transition';
 
 export default function DesktopSpace() {
   const parallax = useParallax({
@@ -113,9 +113,6 @@ export default function DesktopSpace() {
         </Box>
       </Center>
       <Logo />
-      <Center w='full' position='absolute' bottom='0'>
-        <TransitionIllustrationBloc />
-      </Center>
     </Box>
   );
 }

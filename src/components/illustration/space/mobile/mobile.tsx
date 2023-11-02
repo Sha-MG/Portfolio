@@ -3,6 +3,7 @@ import { useParallax } from 'react-scroll-parallax';
 
 import { Box, Center, HStack } from '@chakra-ui/react';
 
+import TransitionIllustrationBlocMobile from '../../transition-mobile';
 import EtoilesLayer1 from '../desktop/etoiles-layer1';
 import EtoilesLayer2 from '../desktop/etoiles-layer2';
 import EtoilesLayer3 from '../desktop/etoiles-layer3';
@@ -26,7 +27,6 @@ import TraitsVitesse3Mobile from './traits-3-mobile';
 import TraitsVitesse4Mobile from './traits-4-mobile';
 import TraitsFuseeDroiteMobile from './traits-fusee-droite-mobile';
 import TraitsFuseeGaucheMobile from './traits-fusee-gauche-mobile';
-import TransitionIllustrationBlocMobile from './transition-mobile';
 
 export default function MobileSpace() {
   const parallax = useParallax({
@@ -95,9 +95,6 @@ export default function MobileSpace() {
         </Box>
       </Center>
       <LogoMobile />
-      <Center w='full' position='absolute' bottom='0'>
-        <TransitionIllustrationBlocMobile />
-      </Center>
     </Box>
   );
 }
