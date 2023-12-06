@@ -11,7 +11,7 @@ export default function Chante() {
       ref={parallax.ref as LegacyRef<HTMLDivElement>}
       position='absolute'
       bottom={12}
-      left={-270}
+      left={{ 'base': -270, 'md': -250, 'xl': -270, '2xl': -380 }}
     >
       <svg
         width='108'

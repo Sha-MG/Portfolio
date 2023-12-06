@@ -17,7 +17,11 @@ export default function AboutMe() {
       : '#C283A8';
 
   return (
-    <Bloc topTransitionColor={strokeColor} currentBloc={1}>
+    <Bloc
+      topTransitionColor={strokeColor}
+      currentBloc={1}
+      title='À propos de moi'
+    >
       <VStack spacing={{ base: 8, md: 10, lg: 5 }}>
         <Resume />
         <Presentation />

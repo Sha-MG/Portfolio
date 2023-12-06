@@ -38,6 +38,14 @@ const theme = {
       portrait: {
         ellipse: 'primary.900',
       },
+      bloc2: {
+        bgColor: 'primary.800',
+        title: 'primary.50',
+        navigation: 'primary.900',
+        activeNavigation: 'primary.600',
+        text: 'general.black',
+        menu: 'primary.900',
+      },
     },
     components: { ...components },
   },

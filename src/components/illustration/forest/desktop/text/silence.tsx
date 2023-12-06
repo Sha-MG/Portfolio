@@ -10,7 +10,7 @@ export default function Silence() {
     <Box
       ref={parallax.ref as LegacyRef<HTMLDivElement>}
       position='absolute'
-      left={-250}
+      left={{ 'base': -230, 'md': -240, 'xl': -250, '2xl': -280 }}
       top={6}
     >
       <svg

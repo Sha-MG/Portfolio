@@ -11,7 +11,7 @@ export default function Créativité() {
       ref={parallax.ref as LegacyRef<HTMLDivElement>}
       position='absolute'
       top={20}
-      left={-400}
+      left={{ 'base': -380, 'md': -380, 'xl': -400, '2xl': -500 }}
     >
       <svg
         width='184'

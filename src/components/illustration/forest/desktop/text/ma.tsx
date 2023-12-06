@@ -11,7 +11,7 @@ export default function Ma() {
       ref={parallax.ref as LegacyRef<HTMLDivElement>}
       position='absolute'
       top={16}
-      left={-295}
+      left={{ 'base': -280, 'md': -295, '2xl': -330 }}
       pt={2}
     >
       <svg

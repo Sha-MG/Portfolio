@@ -10,7 +10,7 @@ export default function Arbres() {
     <Box
       ref={parallax.ref as LegacyRef<HTMLDivElement>}
       position='absolute'
-      left={-459}
+      left={{ 'base': -430, 'md': -440, 'xl': -459, '2xl': -530 }}
       top={14}
     >
       <svg

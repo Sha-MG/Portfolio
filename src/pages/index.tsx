@@ -6,6 +6,7 @@ import { ParallaxProvider } from 'react-scroll-parallax';
 
 import AboutMe from '@/components/about/about-me';
 import Illustration from '@/components/illustration/illustration';
+import Timeline from '@/components/timeline/timeline';
 import theme from '@/theme';
 import forest from '@/theme/ColorTheme/forest';
 import sea from '@/theme/ColorTheme/sea';
@@ -40,7 +41,7 @@ export default function App() {
           <Box bg='general.white' color='general.black' flex={1}>
             <Illustration />
             <AboutMe />
-            <Box h='300vh'></Box>
+            <Timeline />
           </Box>
         </ParallaxProvider>
       </ThemeContext.Provider>
