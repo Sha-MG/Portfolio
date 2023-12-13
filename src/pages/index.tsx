@@ -6,6 +6,8 @@ import { ParallaxProvider } from 'react-scroll-parallax';
 
 import AboutMe from '@/components/about/about-me';
 import Illustration from '@/components/illustration/illustration';
+import Projects from '@/components/projects/projects';
+import Technologies from '@/components/technologies/technologies';
 import Timeline from '@/components/timeline/timeline';
 import theme from '@/theme';
 import forest from '@/theme/ColorTheme/forest';
@@ -42,6 +44,8 @@ export default function App() {
             <Illustration />
             <AboutMe />
             <Timeline />
+            <Technologies />
+            <Projects />
           </Box>
         </ParallaxProvider>
       </ThemeContext.Provider>

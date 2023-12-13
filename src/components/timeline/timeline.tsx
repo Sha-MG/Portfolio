@@ -5,6 +5,12 @@ import { useTheme } from '@/pages';
 import { Box, Center } from '@chakra-ui/react';
 
 import Bloc from '../general/bloc/bloc';
+import LeafIcon from '../general/icons/forest/leaf';
+import Leaf2Icon from '../general/icons/forest/leaf2';
+import SeahorseIcon from '../general/icons/sea/seahorse';
+import ShellfishIcon from '../general/icons/sea/shellfish';
+import IconNuageDroite from '../general/icons/space/nuage-droite';
+import IconNuageGauche from '../general/icons/space/nuage-gauche';
 import Node1 from './node1';
 import Node2 from './node2';
 import Node3 from './node3';
@@ -36,6 +42,28 @@ export default function Timeline() {
       title='Expériences & Formations'
       bgColor={activeColorTheme.id === 'space' ? '#F1C9C1' : 'bloc2.bgColor'}
       noContainer
+      leftIcon={
+        activeColorTheme.id === 'space' ? (
+          <IconNuageGauche color='#F7F7F7' />
+        ) : activeColorTheme.id === 'forest' ? (
+          <LeafIcon color='#F7F7F7' />
+        ) : (
+          <ShellfishIcon color='#F7F7F7' />
+        )
+      }
+      rightIcon={
+        activeColorTheme.id === 'space' ? (
+          <IconNuageDroite color='#F7F7F7' />
+        ) : activeColorTheme.id === 'forest' ? (
+          <Box transform='scaleX(-1)'>
+            <Leaf2Icon color='#F7F7F7' />
+          </Box>
+        ) : (
+          <Box transform='scaleX(-1)'>
+            <ShellfishIcon color='#F7F7F7' />
+          </Box>
+        )
+      }
     >
       <Box>
         <Box w='full' pt={20} position='relative' ref={ref}>

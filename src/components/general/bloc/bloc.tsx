@@ -1,4 +1,4 @@
-import { Box, Container } from '@chakra-ui/react';
+import { Box, Container, HStack } from '@chakra-ui/react';
 
 import Navigation from './components/navigation';
 import Title from './components/title';
@@ -10,6 +10,8 @@ interface BlocProps {
   title: string;
   bgColor?: string;
   noContainer?: boolean;
+  leftIcon?: React.ReactNode;
+  rightIcon?: React.ReactNode;
   children: React.ReactNode;
 }
 
@@ -19,6 +21,8 @@ export default function Bloc({
   title,
   bgColor,
   noContainer,
+  leftIcon,
+  rightIcon,
   children,
 }: BlocProps) {
   return (
@@ -31,7 +35,15 @@ export default function Bloc({
       {noContainer ? (
         <>
           <TopTransition color={topTransitionColor} />
-          <Title title={title} color={`bloc${currentBloc}.title`} />
+          {leftIcon && rightIcon ? (
+            <HStack w='full' justifyContent='center' spacing={4} mb={10}>
+              <Box>{leftIcon}</Box>
+              <Title title={title} color={`bloc${currentBloc}.title`} />
+              <Box>{rightIcon}</Box>
+            </HStack>
+          ) : (
+            <Title title={title} color={`bloc${currentBloc}.title`} />
+          )}
           {children}
         </>
       ) : (
@@ -42,7 +54,15 @@ export default function Bloc({
           px={{ base: 4, md: 0 }}
         >
           <TopTransition color={topTransitionColor} />
-          <Title title={title} color={`bloc${currentBloc}.title`} />
+          {leftIcon && rightIcon ? (
+            <HStack w='full' justifyContent='center'>
+              <Box>{leftIcon}</Box>
+              <Title title={title} color={`bloc${currentBloc}.title`} />
+              <Box>{rightIcon}</Box>
+            </HStack>
+          ) : (
+            <Title title={title} color={`bloc${currentBloc}.title`} />
+          )}
           {children}
         </Container>
       )}

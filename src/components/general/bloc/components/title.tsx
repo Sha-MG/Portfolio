@@ -7,8 +7,8 @@ interface TitleProps {
 
 export default function Title({ title, color }: TitleProps) {
   return (
-    <Center pt={4}>
-      <Heading as='h2' color={color} px={10} pb={10} textAlign='center'>
+    <Center>
+      <Heading as='h2' color={color} textAlign='center'>
         {title}
       </Heading>
     </Center>
