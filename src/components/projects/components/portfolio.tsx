@@ -69,10 +69,6 @@ export default function Portfolio() {
         'Figma',
       ]}
       smallImage='https://i.ibb.co/H2RdGWf/Capture-d-e-cran-2023-12-11-a-17-51-15.png'
-      bigImage={{
-        base: 'https://i.ibb.co/r5991vy/Capture-d-e-cran-2023-12-11-a-17-57-24.png',
-        md: 'https://i.ibb.co/hLVDLHD/Capture-d-e-cran-2023-12-13-a-11-56-40.png',
-      }}
       bgColor='#666BA2'
       bottomBorder={
         <HStack justifyContent='space-between' opacity={0.4}>

@@ -81,29 +81,30 @@ export default function Project({
               alignItems='flex-start'
               direction={{ base: 'column', md: 'row' }}
             >
-              <Box
-                minH={{ base: '20vh', md: '100vh' }}
-                minW={{ base: '100%', md: '30vw' }}
-                position='relative'
-              >
+              {bigImage && (
                 <Box
-                  position={{ base: 'initial', md: 'fixed' }}
                   minH={{ base: '20vh', md: '100vh' }}
                   minW={{ base: '100%', md: '30vw' }}
-                  bgImage={bigImage}
-                  bgSize='cover'
-                  borderRight={{ base: 'none', md: '1px solid' }}
-                  borderBottom={{ base: '1px solid', md: 'none' }}
-                  borderRightColor={mainColor}
-                />
-              </Box>
+                  position='relative'
+                >
+                  <Box
+                    position={{ base: 'initial', md: 'fixed' }}
+                    minH={{ base: '20vh', md: '100vh' }}
+                    minW={{ base: '100%', md: '30vw' }}
+                    bgImage={bigImage}
+                    bgSize='cover'
+                    borderRight={{ base: 'none', md: '1px solid' }}
+                    borderBottom={{ base: '1px solid', md: 'none' }}
+                    borderRightColor={mainColor}
+                  />
+                </Box>
+              )}
               <Stack p={{ base: 8, md: 10 }} spacing={10}>
                 <Heading as='h3' size='2xl' color={mainColor}>
                   {title}
                 </Heading>
                 <Stack
                   spacing={12}
-                  overflow='scroll'
                   alignItems='flex-start'
                   direction={{ base: 'column', lg: 'row' }}
                 >
