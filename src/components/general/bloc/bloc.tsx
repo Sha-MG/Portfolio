@@ -25,12 +25,15 @@ export default function Bloc({
   rightIcon,
   children,
 }: BlocProps) {
+  const sectionId = `section-${currentBloc}`;
+
   return (
     <Box
       w='full'
       position='relative'
       background={bgColor ?? '#F7F7F7'}
       zIndex={10}
+      id={sectionId}
     >
       {noContainer ? (
         <>

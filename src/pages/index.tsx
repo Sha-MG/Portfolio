@@ -5,6 +5,7 @@ import { createContext, useContext, useEffect, useState } from 'react';
 import { ParallaxProvider } from 'react-scroll-parallax';
 
 import AboutMe from '@/components/about/about-me';
+import { Contact } from '@/components/form/contact';
 import Illustration from '@/components/illustration/illustration';
 import Projects from '@/components/projects/projects';
 import Technologies from '@/components/technologies/technologies';
@@ -46,6 +47,7 @@ export default function App() {
             <Timeline />
             <Technologies />
             <Projects />
+            <Contact />
           </Box>
         </ParallaxProvider>
       </ThemeContext.Provider>

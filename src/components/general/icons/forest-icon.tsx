@@ -2,7 +2,10 @@ import { VStack } from '@chakra-ui/react';
 
 export default function ForestIcon() {
   return (
-    <VStack _hover={{ transform: 'scale(1.5)' }} transition='all 0.2s'>
+    <VStack
+      _hover={{ transform: 'scale(1.5)', cursor: 'pointer' }}
+      transition='all 0.2s'
+    >
       <svg
         width='40'
         height='40'

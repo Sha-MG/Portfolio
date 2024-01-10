@@ -7,6 +7,7 @@ interface NavigationDotProps {
   currentBloc: number;
   isActive: boolean;
   sectionTitle: string;
+  section: number;
   color?: string;
 }
 
@@ -14,10 +15,23 @@ export default function NavigationDot({
   currentBloc,
   isActive,
   sectionTitle,
+  section,
   color,
 }: NavigationDotProps) {
   const [isHovered, setIsHovered] = React.useState(false);
   const isMobile = useMobile();
+
+  const handleClick = () => {
+    section === 0
+      ? window.scrollTo({
+          top: 0,
+          behavior: 'smooth',
+        })
+      : window.scrollTo({
+          top: document.getElementById(`section-${section}`)?.offsetTop,
+          behavior: 'smooth',
+        });
+  };
 
   return isActive ? (
     <Box position='relative' alignSelf={{ base: 'flex-start', md: 'flex-end' }}>
@@ -41,10 +55,9 @@ export default function NavigationDot({
       spacing={{ base: 2, md: 5 }}
     >
       {isMobile ? (
-        <>
+        <Box>
           <Circle
-            onMouseOver={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
+            onClick={() => window.scrollTo(0, 0)}
             bg={color ?? `bloc${currentBloc}.navigation`}
             size={3}
             ml={1}
@@ -61,7 +74,7 @@ export default function NavigationDot({
           >
             {sectionTitle}
           </Text>
-        </>
+        </Box>
       ) : (
         <>
           <Text
@@ -78,6 +91,7 @@ export default function NavigationDot({
             mr={1}
             onMouseOver={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
+            onClick={handleClick}
             bg={color ?? `bloc${currentBloc}.navigation`}
             size={4}
             transition='all 0.3s ease-in-out'

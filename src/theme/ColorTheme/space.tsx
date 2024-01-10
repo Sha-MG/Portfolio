@@ -17,7 +17,7 @@ const theme: AppTheme = {
       100: '#F7F7F7',
       200: '#F7F7F7',
       300: '#F7F7F7',
-      400: '#F1DDCD',
+      400: '#E39EAC',
       500: '#F1C9C1',
       600: '#E39EAC',
       700: '#C9C1D5',

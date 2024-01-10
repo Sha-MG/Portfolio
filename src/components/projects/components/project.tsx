@@ -154,7 +154,7 @@ export default function Project({
                         justify={{ base: 'center', lg: 'space-between' }}
                       >
                         {technologies.map((technology) => (
-                          <WrapItem transform='scale(0.8)'>
+                          <WrapItem transform='scale(0.8)' key={technology}>
                             {getTechnology(technology, mainColor)}
                           </WrapItem>
                         ))}
