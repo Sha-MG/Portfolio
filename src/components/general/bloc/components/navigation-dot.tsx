@@ -61,7 +61,7 @@ export default function NavigationDot({
       {isMobile ? (
         <Box>
           <Circle
-            onClick={() => window.scrollTo(0, 0)}
+            onClick={handleClick}
             bg={color ?? `bloc${currentBloc}.navigation`}
             size={3}
             ml={1}

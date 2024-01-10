@@ -91,11 +91,6 @@ export default function Nockee() {
             <Box pb={4}>
               <MapIcon />
             </Box>
-            <Building2Icon />
-            <Box pb={4}>
-              <KeyIcon />
-            </Box>
-            <House2Icon />
           </HStack>
         ) : (
           <HStack justifyContent='space-between' opacity={0.4}>

@@ -14,11 +14,13 @@ import MoonIcon from '@/components/general/icons/space/moon';
 import PlanetIcon from '@/components/general/icons/space/planet';
 import RocketIcon from '@/components/general/icons/space/rocket';
 import SatelliteIcon from '@/components/general/icons/space/satelit';
+import useTablet from '@/hooks/useTablet';
 import { Box, HStack, Stack, Text } from '@chakra-ui/react';
 
 import Project from './project';
 
 export default function Portfolio() {
+  const isTablet = useTablet();
   return (
     <Project
       title='Portfolio'
@@ -71,44 +73,58 @@ export default function Portfolio() {
       smallImage='https://i.ibb.co/H2RdGWf/Capture-d-e-cran-2023-12-11-a-17-51-15.png'
       bgColor='#666BA2'
       bottomBorder={
-        <HStack justifyContent='space-between' opacity={0.4}>
-          <MoonIcon />
-          <Box pb={4}>
+        isTablet ? (
+          <HStack justifyContent='space-between' opacity={0.4}>
+            <MoonIcon />
+            <LeafIcon color='#F0C273' />
+            <Box pb={4}>
+              <MeteoriteIcon />
+            </Box>
+            <RayIcon color='#E3A591' />
+            <Box pb={4}>
+              <SunflowerIcon color='#F0C273' />
+            </Box>
+          </HStack>
+        ) : (
+          <HStack justifyContent='space-between' opacity={0.4}>
+            <MoonIcon />
+            <Box pb={4}>
+              <AnchorIcon color='#E3A591' />
+            </Box>
+            <LeafIcon color='#F0C273' />
+            <Box pb={4}>
+              <MeteoriteIcon />
+            </Box>
+            <RayIcon color='#E3A591' />
+            <Box pb={4}>
+              <SunflowerIcon color='#F0C273' />
+            </Box>
+            <RocketIcon />
+            <Box pb={4}>
+              <ShellfishIcon color='#E3A591' />
+            </Box>
+            <ForestIcon color='#F0C273' />
+            <Box pb={4}>
+              <SatelliteIcon />
+            </Box>
+            <NarwhalIcon color='#E3A591' />
+            <Box pb={4}>
+              <Leaf2Icon color='#F0C273' />
+            </Box>
+            <PlanetIcon />
+            <Box pb={4}>
+              <SeahorseIcon color='#E3A591' />
+            </Box>
+            <MushroomIcon color='#F0C273' />
+            <Box pb={4}>
+              <MeteoriteIcon />
+            </Box>
             <AnchorIcon color='#E3A591' />
-          </Box>
-          <LeafIcon color='#F0C273' />
-          <Box pb={4}>
-            <MeteoriteIcon />
-          </Box>
-          <RayIcon color='#E3A591' />
-          <Box pb={4}>
-            <SunflowerIcon color='#F0C273' />
-          </Box>
-          <RocketIcon />
-          <Box pb={4}>
-            <ShellfishIcon color='#E3A591' />
-          </Box>
-          <ForestIcon color='#F0C273' />
-          <Box pb={4}>
-            <SatelliteIcon />
-          </Box>
-          <NarwhalIcon color='#E3A591' />
-          <Box pb={4}>
-            <Leaf2Icon color='#F0C273' />
-          </Box>
-          <PlanetIcon />
-          <Box pb={4}>
-            <SeahorseIcon color='#E3A591' />
-          </Box>
-          <MushroomIcon color='#F0C273' />
-          <Box pb={4}>
-            <MeteoriteIcon />
-          </Box>
-          <AnchorIcon color='#E3A591' />
-          <Box pb={4}>
-            <TreeIcon color='#F0C273' />
-          </Box>
-        </HStack>
+            <Box pb={4}>
+              <TreeIcon color='#F0C273' />
+            </Box>
+          </HStack>
+        )
       }
     />
   );
