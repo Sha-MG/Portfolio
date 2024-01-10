@@ -14,7 +14,6 @@ import JusquaElles from './jusqu-a-elles';
 import La from './la';
 import LeCiel from './le-ciel';
 import Les from './les';
-import Logo from './logo';
 import Lune from './lune';
 import MeMène from './me-mene';
 import MeMontre from './me-montre';
@@ -112,7 +111,6 @@ export default function DesktopSpace() {
           <JusquaElles />
         </Box>
       </Center>
-      <Logo />
     </Box>
   );
 }

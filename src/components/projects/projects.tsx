@@ -2,12 +2,9 @@ import { useTheme } from '@/pages';
 import { Box, Center, HStack, VStack } from '@chakra-ui/react';
 
 import Bloc from '../general/bloc/bloc';
-import Mushroom from '../general/icons/forest/mushroom';
 import SunflowerIcon from '../general/icons/forest/sunflower';
-import Anchor from '../general/icons/sea/anchor';
 import SeahorseIcon from '../general/icons/sea/seahorse';
 import MoonIcon from '../general/icons/space/moon';
-import PlanetIcon from '../general/icons/space/planet';
 import Nockee from './components/nockee';
 import Portfolio from './components/portfolio';
 
@@ -48,33 +45,22 @@ export default function Projects() {
         <Nockee />
         <Portfolio />
       </HStack>
-      <Center h={40} alignItems='flex-end'>
-        <VStack position='relative'>
-          <Box position='absolute'>
-            {activeColorTheme.id === 'space' ? (
-              <PlanetIcon color='bloc4.title' />
-            ) : activeColorTheme.id === 'sea' ? (
-              <Anchor color='bloc4.title' />
-            ) : (
-              <Mushroom color='bloc4.title' />
-            )}
-          </Box>
-          <VStack spacing={0}>
-            <HStack justifyContent='space-between' alignItems='baseline' w={32}>
-              <Box h={4} w={0.5} bg='bloc4.title' />
-              <Box h={8} w={0.5} bg='bloc4.title' />
-              <Box h={12} w={0.5} bg='bloc4.title' />
-              <Box h={4} w={0.5} bg='bloc4.title' />
-              <Box h={10} w={0.5} bg='bloc4.title' />
-              <Box h={8} w={0.5} bg='bloc4.title' />
-              <Box h={6} w={0.5} bg='bloc4.title' />
-              <Box h={4} w={0.5} bg='bloc4.title' />
-              <Box h={8} w={0.5} bg='bloc4.title' />
-              <Box h={12} w={0.5} bg='bloc4.title' />
-            </HStack>
-            <Box h={0.5} w={32} bg='bloc4.title' />
-            <Box h={36} w={1} bg='bloc4.title' />
-          </VStack>
+      <Center alignItems='flex-end' pt={10}>
+        <VStack spacing={0}>
+          <HStack justifyContent='space-between' alignItems='baseline' w={32}>
+            <Box h={4} w={0.5} bg='bloc4.title' />
+            <Box h={8} w={0.5} bg='bloc4.title' />
+            <Box h={12} w={0.5} bg='bloc4.title' />
+            <Box h={4} w={0.5} bg='bloc4.title' />
+            <Box h={10} w={0.5} bg='bloc4.title' />
+            <Box h={8} w={0.5} bg='bloc4.title' />
+            <Box h={6} w={0.5} bg='bloc4.title' />
+            <Box h={4} w={0.5} bg='bloc4.title' />
+            <Box h={8} w={0.5} bg='bloc4.title' />
+            <Box h={12} w={0.5} bg='bloc4.title' />
+          </HStack>
+          <Box h={0.5} w={32} bg='bloc4.title' />
+          <Box h={36} w={1} bg='bloc4.title' />
         </VStack>
       </Center>
     </Bloc>

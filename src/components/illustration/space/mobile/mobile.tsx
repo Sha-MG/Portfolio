@@ -3,10 +3,6 @@ import { useParallax } from 'react-scroll-parallax';
 
 import { Box, Center, HStack } from '@chakra-ui/react';
 
-import TransitionIllustrationBlocMobile from '../../transition-mobile';
-import EtoilesLayer1 from '../desktop/etoiles-layer1';
-import EtoilesLayer2 from '../desktop/etoiles-layer2';
-import EtoilesLayer3 from '../desktop/etoiles-layer3';
 import CuriositéMobile from './curiosite-mobile';
 import EtoilesLayer1Mobile from './etoiles-layer1-mobile';
 import EtoilesLayer2Mobile from './etoiles-layer2-mobile';
@@ -17,7 +13,6 @@ import JusquaEllesMobile from './jusqu-a-elles-mobile';
 import LaMobile from './la-mobile';
 import LeCielMobile from './le-ciel-mobile';
 import LesMobile from './les-mobile';
-import LogoMobile from './logo-mobile';
 import LuneMobile from './lune-mobile';
 import MeMèneMobile from './me-mene-mobile';
 import MeMontreMobile from './me-montre-mobile';
@@ -94,7 +89,6 @@ export default function MobileSpace() {
           <JusquaEllesMobile />
         </Box>
       </Center>
-      <LogoMobile />
     </Box>
   );
 }

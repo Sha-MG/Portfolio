@@ -19,6 +19,7 @@ import MushroomIcon from '../general/icons/forest/mushroom';
 import BeachIcon from '../general/icons/sea/beach';
 import PlanetIcon from '../general/icons/space/planet';
 import RocketIcon from '../general/icons/space/rocket';
+import Logo from '../illustration/logo';
 
 export const Contact = () => {
   const { activeColorTheme } = useTheme();
@@ -143,6 +144,7 @@ export const Contact = () => {
               Message
             </FormLabel>
             <Textarea
+              w={{ base: 'container.xs', md: 'container.sm' }}
               focusBorderColor='primary.400'
               bg='rgba(255, 255, 255, 0.2)'
               border='none'
@@ -161,12 +163,10 @@ export const Contact = () => {
               Envoyer
             </Button>
           </VStack>
-          <Center py={8}>
-            <Text fontSize='sm'>
-              J'ai créé le design, les illustrations et le développement de ce
-              portfolio avec ❤️
-            </Text>
-          </Center>
+          <Text fontSize='sm' w='full' textAlign='center' py={8}>
+            J'ai créé le design, les illustrations et le développement de ce
+            portfolio avec ❤️
+          </Text>
         </Stack>
       </Center>
     </Bloc>

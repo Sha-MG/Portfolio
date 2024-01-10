@@ -1,4 +1,5 @@
-import { Box, Container, HStack } from '@chakra-ui/react';
+import useMobile from '@/hooks/useMobile';
+import { Box, Container, HStack, VStack } from '@chakra-ui/react';
 
 import Navigation from './components/navigation';
 import Title from './components/title';
@@ -26,7 +27,7 @@ export default function Bloc({
   children,
 }: BlocProps) {
   const sectionId = `section-${currentBloc}`;
-
+  const isMobile = useMobile();
   return (
     <Box
       w='full'
@@ -39,11 +40,23 @@ export default function Bloc({
         <>
           <TopTransition color={topTransitionColor} />
           {leftIcon && rightIcon ? (
-            <HStack w='full' justifyContent='center' spacing={4} mb={10}>
-              <Box>{leftIcon}</Box>
-              <Title title={title} color={`bloc${currentBloc}.title`} />
-              <Box>{rightIcon}</Box>
-            </HStack>
+            isMobile ? (
+              <VStack w='full' justifyContent='center' spacing={0} mb={10}>
+                <Box transform={'scale(0.6)'}>{rightIcon}</Box>
+                <Title title={title} color={`bloc${currentBloc}.title`} />
+              </VStack>
+            ) : (
+              <HStack
+                w='full'
+                justifyContent='center'
+                spacing={{ base: 1, md: 4 }}
+                mb={10}
+              >
+                <Box>{leftIcon}</Box>
+                <Title title={title} color={`bloc${currentBloc}.title`} />
+                <Box>{rightIcon}</Box>
+              </HStack>
+            )
           ) : (
             <Title title={title} color={`bloc${currentBloc}.title`} />
           )}
@@ -58,11 +71,23 @@ export default function Bloc({
         >
           <TopTransition color={topTransitionColor} />
           {leftIcon && rightIcon ? (
-            <HStack w='full' justifyContent='center'>
-              <Box>{leftIcon}</Box>
-              <Title title={title} color={`bloc${currentBloc}.title`} />
-              <Box>{rightIcon}</Box>
-            </HStack>
+            isMobile ? (
+              <VStack w='full' justifyContent='center' spacing={0} mb={10}>
+                <Box transform={'scale(0.6)'}>{rightIcon}</Box>
+                <Title title={title} color={`bloc${currentBloc}.title`} />
+              </VStack>
+            ) : (
+              <HStack
+                w='full'
+                justifyContent='center'
+                spacing={{ base: 1, md: 4 }}
+                mb={10}
+              >
+                <Box>{leftIcon}</Box>
+                <Title title={title} color={`bloc${currentBloc}.title`} />
+                <Box>{rightIcon}</Box>
+              </HStack>
+            )
           ) : (
             <Title title={title} color={`bloc${currentBloc}.title`} />
           )}

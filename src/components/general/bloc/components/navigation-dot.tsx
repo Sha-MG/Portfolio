@@ -34,7 +34,11 @@ export default function NavigationDot({
   };
 
   return isActive ? (
-    <Box position='relative' alignSelf={{ base: 'flex-start', md: 'flex-end' }}>
+    <Box
+      position='relative'
+      alignSelf={{ base: 'flex-start', md: 'flex-end' }}
+      pb={{ base: 3, md: 0 }}
+    >
       <Circle
         borderWidth={1}
         borderColor={color ?? `bloc${currentBloc}.navigation`}

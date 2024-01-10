@@ -99,67 +99,80 @@ export default function Project({
                   />
                 </Box>
               )}
-              <Stack p={{ base: 8, md: 10 }} spacing={10}>
-                <Heading as='h3' size='2xl' color={mainColor}>
-                  {title}
-                </Heading>
-                <Stack
-                  spacing={12}
-                  alignItems='flex-start'
-                  direction={{ base: 'column', lg: 'row' }}
-                >
-                  {content}
-                  <Stack>
-                    {link ||
-                      (googlePlayLink && (
-                        <Stack spacing={6}>
-                          <Center>
-                            <Heading as='h4' fontSize='lg' color={mainColor}>
-                              Liens
-                            </Heading>
-                          </Center>
-                          <HStack spacing={8} justifyContent='center'>
-                            {link && (
-                              <Link href={link} target='_blank'>
-                                <FeaturedIcon
-                                  icon={<LinkIcon />}
-                                  name='Site'
-                                  feature='Dot'
-                                  textColor={mainColor}
-                                  small
-                                />
-                              </Link>
-                            )}
-                            {googlePlayLink && (
-                              <Link href={googlePlayLink} target='_blank'>
-                                <FeaturedIcon
-                                  icon={<GooglePlayIcon />}
-                                  name='GooglePlay'
-                                  feature='Sparkles'
-                                  textColor={mainColor}
-                                  small
-                                ></FeaturedIcon>
-                              </Link>
-                            )}
-                          </HStack>
-                        </Stack>
-                      ))}
-                    <Stack spacing={6}>
-                      <Center>
-                        <Heading as='h4' fontSize='lg' color={mainColor}>
-                          Technologies
-                        </Heading>
-                      </Center>
-                      <Wrap
-                        spacing={4}
-                        justify={{ base: 'center', lg: 'space-between' }}
-                      >
-                        {technologies.map((technology) => (
-                          <WrapItem transform='scale(0.8)' key={technology}>
-                            {getTechnology(technology, mainColor)}
-                          </WrapItem>
+              <Stack
+                p={{ base: 8, md: 10 }}
+                spacing={10}
+                minH='90vh'
+                justifyContent='space-between'
+              >
+                <Stack spacing={10}>
+                  <Heading as='h3' size='2xl' color={mainColor}>
+                    {title}
+                  </Heading>
+                  <Stack
+                    spacing={12}
+                    alignItems='flex-start'
+                    direction={{ base: 'column', lg: 'row' }}
+                  >
+                    {content}
+                    <Stack>
+                      {link ||
+                        (googlePlayLink && (
+                          <Stack spacing={6}>
+                            <Center>
+                              <Heading as='h4' fontSize='lg' color={mainColor}>
+                                Liens
+                              </Heading>
+                            </Center>
+                            <HStack spacing={8} justifyContent='center'>
+                              {link && (
+                                <Link href={link} target='_blank'>
+                                  <FeaturedIcon
+                                    icon={<LinkIcon />}
+                                    name='Site'
+                                    feature='Dot'
+                                    textColor={mainColor}
+                                    small
+                                  />
+                                </Link>
+                              )}
+                              {googlePlayLink && (
+                                <Link href={googlePlayLink} target='_blank'>
+                                  <FeaturedIcon
+                                    icon={<GooglePlayIcon />}
+                                    name='GooglePlay'
+                                    feature='Sparkles'
+                                    textColor={mainColor}
+                                    small
+                                  ></FeaturedIcon>
+                                </Link>
+                              )}
+                            </HStack>
+                          </Stack>
                         ))}
-                      </Wrap>
+                      <Stack spacing={6}>
+                        <Center>
+                          <Heading as='h4' fontSize='lg' color={mainColor}>
+                            Technologies
+                          </Heading>
+                        </Center>
+                        <Wrap
+                          spacing={4}
+                          justify={{ base: 'center', lg: 'space-between' }}
+                        >
+                          {technologies.map((technology) => (
+                            <WrapItem
+                              transform={{
+                                'base': 'scale(0.8)',
+                                '2xl': 'scale(1.1)',
+                              }}
+                              key={technology}
+                            >
+                              {getTechnology(technology, mainColor)}
+                            </WrapItem>
+                          ))}
+                        </Wrap>
+                      </Stack>
                     </Stack>
                   </Stack>
                 </Stack>

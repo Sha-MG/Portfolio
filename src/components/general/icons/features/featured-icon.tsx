@@ -1,3 +1,4 @@
+import useMobile from '@/hooks/useMobile';
 import { Box, Center, Stack } from '@chakra-ui/react';
 
 import BubbleFeature from './bubble-feature';
@@ -21,8 +22,13 @@ export default function FeaturedIcon({
   textColor,
   small,
 }: FeaturedIconProps) {
+  const isMobile = useMobile();
   return (
-    <Stack role='group' spacing={4} {...(small && { transform: 'scale(0.8)' })}>
+    <Stack
+      role='group'
+      spacing={4}
+      {...((small || isMobile) && { transform: 'scale(0.8)' })}
+    >
       <Center position='relative'>
         <Box
           position='absolute'

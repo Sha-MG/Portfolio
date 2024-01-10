@@ -3,13 +3,9 @@ import { Box, HStack, VStack } from '@chakra-ui/react';
 import FeaturedIcon from '../general/icons/features/featured-icon';
 import AfterEffect from '../general/icons/technologies/after-effect';
 import Figma from '../general/icons/technologies/figma';
-import Git from '../general/icons/technologies/git';
-import Gitlab from '../general/icons/technologies/gitlab';
 import Illustrator from '../general/icons/technologies/illustrator';
-import Notion from '../general/icons/technologies/notion';
 import Photoshop from '../general/icons/technologies/photoshop';
 import React from '../general/icons/technologies/react';
-import Slack from '../general/icons/technologies/slack';
 
 export default function Design() {
   return (

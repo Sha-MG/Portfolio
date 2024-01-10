@@ -15,7 +15,7 @@ import TraitHaut from './portrait-components/trait-haut';
 export default function Portait() {
   const { activeColorTheme } = useTheme();
   return (
-    <Box>
+    <Box transform={{ base: 'scale(0.8)', md: 'none' }}>
       <svg
         width='228'
         height='245'

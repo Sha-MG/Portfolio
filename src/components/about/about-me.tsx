@@ -3,8 +3,6 @@ import { Box, VStack } from '@chakra-ui/react';
 
 import Bloc from '../general/bloc/bloc';
 import ForestIcon from '../general/icons/forest/forest';
-import TreeIcon from '../general/icons/forest/tree';
-import Beach from '../general/icons/sea/beach';
 import RayIcon from '../general/icons/sea/ray';
 import PlanetIcon from '../general/icons/space/planet';
 import RocketIcon from '../general/icons/space/rocket';

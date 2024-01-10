@@ -99,7 +99,10 @@ export default function Navigation({
           </MenuList>
         </Menu>
       </HStack>
-      <VStack spacing={5} {...(isMobile ? { ml: 2 } : { mr: 2 })}>
+      <VStack
+        spacing={{ base: 1, md: 5 }}
+        {...(isMobile ? { ml: 2 } : { mr: 2 })}
+      >
         <NavigationDot
           currentBloc={currentBloc}
           isActive={currentBloc === 0 ? true : false}

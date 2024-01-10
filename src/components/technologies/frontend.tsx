@@ -16,10 +16,10 @@ export default function FrontEnd() {
         FrontEnd
       </Box>
       <HStack
-        spacing={10}
+        spacing={{ base: 1, md: 10 }}
         wrap='wrap'
         w='full'
-        justifyContent={{ base: 'center', lg: 'space-between' }}
+        justifyContent='space-between'
       >
         <FeaturedIcon
           icon={<JavaScript />}

@@ -3,6 +3,7 @@ import { useTheme } from '@/pages';
 import { Box, Center } from '@chakra-ui/react';
 
 import Forest from './forest/forest';
+import Logo from './logo';
 import Sea from './sea/sea';
 import Space from './space/space';
 import TransitionIllustrationBloc from './transition';
@@ -21,6 +22,9 @@ export default function Illustration() {
       ) : (
         <Forest />
       )}
+      <Center>
+        <Logo />
+      </Center>
       <Center w='full' position='absolute' bottom='0' zIndex={10}>
         {isMobile ? (
           <TransitionIllustrationBlocMobile
