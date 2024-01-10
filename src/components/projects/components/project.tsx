@@ -82,13 +82,13 @@ export default function Project({
               direction={{ base: 'column', md: 'row' }}
             >
               <Box
-                h={{ base: '20vh', md: '100vh' }}
+                minH={{ base: '20vh', md: '100vh' }}
                 minW={{ base: '100%', md: '30vw' }}
                 position='relative'
               >
                 <Box
                   position={{ base: 'initial', md: 'fixed' }}
-                  h={{ base: '20vh', md: '100vh' }}
+                  minH={{ base: '20vh', md: '100vh' }}
                   minW={{ base: '100%', md: '30vw' }}
                   bgImage={bigImage}
                   bgSize='cover'
