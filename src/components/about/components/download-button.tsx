@@ -20,13 +20,7 @@ export default function DownloadButton({ color }: DownloadButtonProps) {
             ? '/sea.pdf'
             : '/space.pdf'
         }
-        download={
-          activeColorTheme.id === 'forest'
-            ? '/Morgane Gamory CV - Forest.pdf'
-            : activeColorTheme.id === 'sea'
-            ? '/Morgane Gamory CV - Sea.pdf'
-            : '/Morgane Gamory CV - Space.pdf'
-        }
+        download='Morgane-Gamory-CV'
         target='_blank'
       >
         <Box

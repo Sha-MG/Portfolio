@@ -1,4 +1,3 @@
-import FeaturedIcon from '@/components/general/icons/features/featured-icon';
 import AppartementIcon from '@/components/general/icons/nockee/appartement';
 import BridgeIcon from '@/components/general/icons/nockee/bridge';
 import BuildingIcon from '@/components/general/icons/nockee/building';
