@@ -1,26 +1,22 @@
+import { useTranslation } from 'react-i18next';
+
 import { Stack, Text } from '@chakra-ui/react';
 
 import Timeline from './components/timeline';
 
 export default function Node3() {
+  const { t } = useTranslation();
   return (
     <Timeline
       title='Duoloriages'
-      postName='Artiste Auteur'
-      date='2020 - 2022'
+      postName={t('bloc2.duoloriages.postName')}
+      date={t('bloc2.duoloriages.postDate')}
       margeTop={20}
       isWork
       description={
         <Stack lineHeight={1.2} spacing={4}>
-          <Text>
-            Création de livres de coloriage à réaliser en duo. Enfant et adulte
-            s’allient autour de la réalisation d’une oeuvre commune dont ils ont
-            chacun une moitié.
-          </Text>
-          <Text>
-            Concept, dessin, mise en page, impression, distribution & mise en
-            vente sous le statut d'Artiste.
-          </Text>
+          <Text>{t('bloc2.duoloriages.text1')}</Text>
+          <Text>{t('bloc2.duoloriages.text2')}</Text>
         </Stack>
       }
     />

@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next';
+
 import { useTheme } from '@/pages';
 import { Box, VStack } from '@chakra-ui/react';
 
@@ -20,11 +22,13 @@ export default function AboutMe() {
       ? '#9CB380'
       : '#C283A8';
 
+  const { t } = useTranslation();
+
   return (
     <Bloc
       topTransitionColor={strokeColor}
       currentBloc={1}
-      title='À propos de moi'
+      title={t('bloc1.title')}
       leftIcon={
         activeColorTheme.id === 'space' ? (
           <Box pb={6}>

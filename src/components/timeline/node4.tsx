@@ -1,21 +1,21 @@
+import { useTranslation } from 'react-i18next';
+
 import { Stack, Text } from '@chakra-ui/react';
 
 import Timeline from './components/timeline';
 
 export default function Node4() {
+  const { t } = useTranslation();
   return (
     <Timeline
-      title='Umons | Belgique'
+      title={t('bloc2.psycho.title')}
       leftSide
-      postName='L2 Psychologie'
+      postName={t('bloc2.psycho.postName')}
       date='2018 - 2020'
       margeTop={-24}
       description={
         <Stack lineHeight={1.2} spacing={4}>
-          <Text>
-            Faculté de psychologie, orientation générale en sciences
-            psychologiques et de l’éducation.
-          </Text>
+          <Text>{t('bloc2.psycho.text1')}</Text>
         </Stack>
       }
     />

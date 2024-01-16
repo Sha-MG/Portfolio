@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next';
+
 import { useTheme } from '@/pages';
 import { Box, Tooltip } from '@chakra-ui/react';
 
@@ -9,11 +11,13 @@ export default function Sushi() {
       : activeColorTheme?.id === 'forest'
       ? '#455647'
       : '#666BA2';
+
+  const { t } = useTranslation();
   return (
     <Tooltip
-      label='La cuisine asiatique'
+      label={t('bloc1.cuisine')}
       bg='general.tooltip'
-      aria-label='La cuisine asiatique'
+      aria-label={t('bloc1.cuisine')}
       boxShadow={`3px 3px ${strokeColor}`}
       color={strokeColor}
       borderWidth={1}

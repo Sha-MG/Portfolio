@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import useTablet from '@/hooks/useTablet';
 import { useTheme } from '@/pages';
@@ -35,11 +36,13 @@ export default function Timeline() {
   }, [ref.current]);
 
   const isTablet = useTablet();
+
+  const { t } = useTranslation();
   return (
     <Bloc
       topTransitionColor='#F7F7F7'
       currentBloc={2}
-      title='Expériences & Formations'
+      title={t('bloc2.title')}
       bgColor={activeColorTheme.id === 'space' ? '#F1C9C1' : 'bloc2.bgColor'}
       noContainer
       leftIcon={

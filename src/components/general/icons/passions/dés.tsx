@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next';
+
 import { useTheme } from '@/pages';
 import { Box, Tooltip } from '@chakra-ui/react';
 
@@ -10,11 +12,13 @@ export default function Dés() {
       ? '#455647'
       : '#666BA2';
 
+  const { t } = useTranslation();
+
   return (
     <Tooltip
-      label='Les jeux de société'
+      label={t('bloc1.jeuxSoc')}
       bg='general.tooltip'
-      aria-label='Les jeux de société'
+      aria-label={t('bloc1.jeuxSoc')}
       boxShadow={`3px 3px ${strokeColor}`}
       color={strokeColor}
       borderWidth={1}

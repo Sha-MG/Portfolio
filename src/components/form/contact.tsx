@@ -1,4 +1,6 @@
+import { t } from 'i18next';
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { useTheme } from '@/pages';
 import {
@@ -16,13 +18,11 @@ import {
 import emailjs from '@emailjs/browser';
 
 import Bloc from '../general/bloc/bloc';
-import FeaturedIcon from '../general/icons/features/featured-icon';
 import MushroomIcon from '../general/icons/forest/mushroom';
 import BeachIcon from '../general/icons/sea/beach';
 import PlanetIcon from '../general/icons/space/planet';
 import RocketIcon from '../general/icons/space/rocket';
 import LinkIcon from '../general/icons/technologies/link';
-import Logo from '../illustration/logo';
 
 export const Contact = () => {
   const { activeColorTheme } = useTheme();
@@ -32,6 +32,8 @@ export const Contact = () => {
       : activeColorTheme.id === 'sea'
       ? '#E3A591'
       : '#F0DC73';
+
+  const { t } = useTranslation();
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -123,7 +125,7 @@ export const Contact = () => {
                 activeColorTheme.id === 'forest' ? 'primary.400' : 'primary.600'
               }
             >
-              Nom
+              {t('bloc5.name')}
             </FormLabel>
             <Input
               focusBorderColor='primary.400'
@@ -176,12 +178,11 @@ export const Contact = () => {
                 activeColorTheme.id === 'forest' ? 'primary.400' : 'primary.600'
               }
             >
-              Envoyer
+              {t('bloc5.envoyer')}
             </Button>
           </VStack>
           <Text fontSize='sm' w='full' textAlign='center' py={8}>
-            J'ai créé le design, les illustrations et le développement de ce
-            portfolio avec ❤️
+            {t('bloc5.bottom')}
           </Text>
         </Stack>
       </Center>

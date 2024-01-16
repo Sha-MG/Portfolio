@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next';
+
 import { useTheme } from '@/pages';
 import { Box, Tooltip } from '@chakra-ui/react';
 
@@ -10,11 +12,12 @@ export default function Movie() {
       ? '#455647'
       : '#666BA2';
 
+  const { t } = useTranslation();
   return (
     <Tooltip
-      label='Le cinéma'
+      label={t('bloc1.cinema')}
       bg='general.tooltip'
-      aria-label='Le cinéma'
+      aria-label={t('bloc1.cinema')}
       boxShadow={`3px 3px ${strokeColor}`}
       color={strokeColor}
       borderWidth={1}

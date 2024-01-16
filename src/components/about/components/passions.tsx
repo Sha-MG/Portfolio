@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next';
+
 import Animals from '@/components/general/icons/passions/animals';
 import Drawing from '@/components/general/icons/passions/drawing';
 import Dés from '@/components/general/icons/passions/dés';
@@ -11,10 +13,12 @@ import useMobile from '@/hooks/useMobile';
 import { Box, HStack, VStack } from '@chakra-ui/react';
 
 export default function Passions() {
+  const { t } = useTranslation();
   const isMobile = useMobile();
+
   return isMobile ? (
     <VStack w='full'>
-      <SmallTitle title='Mes passions' />
+      <SmallTitle title={t('bloc1.passions')} />
       <HStack
         w='full'
         justifyContent={{ base: 'center', md: 'space-between' }}
@@ -32,7 +36,7 @@ export default function Passions() {
     </VStack>
   ) : (
     <Box w='container.md'>
-      <SmallTitle title='Mes passions' />
+      <SmallTitle title={t('bloc1.passions')} />
       <HStack
         w='full'
         justifyContent={{ base: 'center', md: 'space-between' }}

@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next';
+
 import { useTheme } from '@/pages';
 import { Box, Tooltip } from '@chakra-ui/react';
 
@@ -10,11 +12,13 @@ export default function Animals() {
       ? '#455647'
       : '#666BA2';
 
+  const { t } = useTranslation();
+
   return (
     <Tooltip
-      label='Les animaux'
+      label={t('bloc1.animaux')}
       bg='general.tooltip'
-      aria-label='Les animaux'
+      aria-label={t('bloc1.animaux')}
       boxShadow={`3px 3px ${strokeColor}`}
       color={strokeColor}
       borderWidth={1}

@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next';
+
 import { useTheme } from '@/pages';
 import { Box, Center, HStack, VStack } from '@chakra-ui/react';
 
@@ -11,9 +13,10 @@ import Portfolio from './components/portfolio';
 export default function Projects() {
   const { activeColorTheme } = useTheme();
 
+  const { t } = useTranslation();
   return (
     <Bloc
-      title='Projets'
+      title={t('bloc4.title')}
       currentBloc={4}
       topTransitionColor='#F7F7F7'
       noContainer

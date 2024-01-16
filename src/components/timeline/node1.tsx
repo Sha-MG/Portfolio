@@ -1,40 +1,25 @@
-import { Box, Stack, Text } from '@chakra-ui/react';
+import { useTranslation } from 'react-i18next';
+
+import { Stack, Text } from '@chakra-ui/react';
 
 import Timeline from './components/timeline';
 
 export default function Node1() {
+  const { t } = useTranslation();
   return (
     <Timeline
       first
       title='nockee'
       isWork
-      postName='Développeuse web frontend'
-      date='Mars 2023 - Sept 2023'
+      postName={t('bloc2.nockee.postName')}
+      date={t('bloc2.nockee.postDate')}
       margeTop={0}
       description={
         <Stack lineHeight={1.2} spacing={4}>
-          <Text>
-            Stage de fin d’études chez nockee, entreprise innovante dans la
-            gestion locative, présente sur le campus de Station F, plus grand
-            incubateur de startups au monde.
-          </Text>
-          <Box>
-            <Text>
-              Développement d’un Saas avec Next.js, Typescript & Chakra ui ainsi
-              que d’un site vitrine sur Prismic avec la même stack technique.
-              Design de l’interface web et réalisation d’illustrations sur
-              Figma. Développement d’une application mobile IOS et Android avec
-              React native.
-            </Text>
-            <Text>
-              Design de l’interface web et réalisation d’illustrations sur
-              Figma.
-            </Text>
-            <Text>
-              Développement d’une application mobile IOS et Android avec React
-              native.
-            </Text>
-          </Box>
+          <Text>{t('bloc2.nockee.text1')}</Text>
+          <Text>{t('bloc2.nockee.text2')}</Text>
+          <Text>{t('bloc2.nockee.text3')}</Text>
+          <Text>{t('bloc2.nockee.text4')}</Text>
         </Stack>
       }
     />

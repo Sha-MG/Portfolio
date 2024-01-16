@@ -8,7 +8,6 @@ import Anchor from '../general/icons/sea/anchor';
 import NarwhalIcon from '../general/icons/sea/narwhale';
 import MeteoriteIcon from '../general/icons/space/meteorite';
 import PlanetIcon from '../general/icons/space/planet';
-import RocketIcon from '../general/icons/space/rocket';
 import SatelliteIcon from '../general/icons/space/satelit';
 import Design from './design';
 import FrontEnd from './frontend';

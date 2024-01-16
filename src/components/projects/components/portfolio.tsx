@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next';
+
 import ForestIcon from '@/components/general/icons/forest/forest';
 import LeafIcon from '@/components/general/icons/forest/leaf';
 import Leaf2Icon from '@/components/general/icons/forest/leaf2';
@@ -21,33 +23,17 @@ import Project from './project';
 
 export default function Portfolio() {
   const isTablet = useTablet();
+  const { t } = useTranslation();
   return (
     <Project
       title='Portfolio'
       mainColor='#C283A8'
       content={
         <Stack textAlign='justify' spacing={4}>
-          <Text>Bienvenue dans mon Portfolio ! </Text>
-          <Text>
-            Explorez un monde où la technologie rencontre l'art. Mon Portfolio,
-            soigneusement développé en React et façonné avec créativité sur
-            Figma, est bien plus qu'une simple collection de projets. C'est une
-            expression de ma passion pour l'alliance entre la programmation et
-            le design. Chaque ligne de code et chaque pixel ont été choisis avec
-            soin pour créer une expérience immersive.
-          </Text>
-          <Text>
-            La puissance de React offre une navigation fluide, tandis que le
-            design élaboré sur Figma ajoute une touche artistique à chaque
-            détail. Laissez-vous guider à travers mes projets, où l'innovation
-            technique se marie à une esthétique artistique.
-          </Text>
-          <Text>
-            Ce Portfolio est le reflet de mon engagement envers la création
-            d'expériences uniques et visuellement captivantes. Explorez,
-            découvrez, et n'hésitez pas à me contacter pour partager vos
-            impressions ou discuter de futures collaborations.
-          </Text>
+          <Text>{t('bloc4.portfolio.text1')}</Text>
+          <Text>{t('bloc4.portfolio.text2')}</Text>
+          <Text>{t('bloc4.portfolio.text3')}</Text>
+          <Text>{t('bloc4.portfolio.text4')}</Text>
         </Stack>
       }
       technologies={[

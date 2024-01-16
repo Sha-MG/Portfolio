@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { useTranslation } from 'react-i18next';
 
 import { useTheme } from '@/pages';
 import { Box, Center, Divider, Text } from '@chakra-ui/react';
@@ -10,6 +11,7 @@ interface DownloadButtonProps {
 export default function DownloadButton({ color }: DownloadButtonProps) {
   const { activeColorTheme } = useTheme();
 
+  const { t } = useTranslation();
   return (
     <Box position='relative' pt={20}>
       <Link
@@ -32,7 +34,7 @@ export default function DownloadButton({ color }: DownloadButtonProps) {
           transition={'all 0.2s ease-in-out'}
           _hover={{ transform: 'scale(1.1)', cursor: 'pointer' }}
         >
-          <Text fontSize='xl'>Télécharger mon CV</Text>
+          <Text fontSize='xl'>{t('bloc1.download')}</Text>
         </Box>
       </Link>
       <Center>
