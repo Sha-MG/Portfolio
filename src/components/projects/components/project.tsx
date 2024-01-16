@@ -150,22 +150,20 @@ export default function Project({
                             </HStack>
                           </Stack>
                         ))}
-                      <Stack spacing={6}>
+                      <Stack spacing={6} minW='10vw'>
                         <Center>
                           <Heading as='h4' fontSize='lg' color={mainColor}>
                             Technologies
                           </Heading>
                         </Center>
-                        <Wrap
-                          spacing={4}
-                          justify={{ base: 'center', lg: 'space-between' }}
-                        >
+                        <Wrap spacing={4}>
                           {technologies.map((technology) => (
                             <WrapItem
                               transform={{
                                 'base': 'scale(0.8)',
                                 '2xl': 'scale(1.1)',
                               }}
+                              justifyContent='space-between'
                               key={technology}
                             >
                               {getTechnology(technology, mainColor)}

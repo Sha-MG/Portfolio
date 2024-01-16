@@ -1,10 +1,20 @@
 import { VStack } from '@chakra-ui/react';
 
-export default function SeaIcon() {
+interface SeaIconProps {
+  disabled?: boolean;
+  onClick?: () => void;
+}
+
+export default function SeaIcon({ disabled, onClick }: SeaIconProps) {
   return (
     <VStack
-      _hover={{ transform: 'scale(1.5)', cursor: 'pointer' }}
-      transition='all 0.2s'
+      transform={{ base: 'scale(0.6)', md: 'scale(0.7)' }}
+      _hover={{
+        transform: { base: 'scale(0.7)', md: 'scale(0.8)' },
+        cursor: 'pointer',
+      }}
+      transition='all 0.3s'
+      onClick={onClick}
     >
       <svg
         width='40'
@@ -13,7 +23,12 @@ export default function SeaIcon() {
         fill='none'
         xmlns='http://www.w3.org/2000/svg'
       >
-        <circle cx='30' cy='30' r='30' fill='#9BCDD6' />
+        <circle
+          cx='30'
+          cy='30'
+          r='30'
+          fill={disabled ? '#CCCCCC' : '#9BCDD6'}
+        />
         <path
           d='M31.2244 17.1266C31.2244 17.9595 30.5084 18.6878 29.5582 18.6878C28.6081 18.6878 27.8921 17.9595 27.8921 17.1266C27.8921 16.2937 28.6081 15.5655 29.5582 15.5655C30.5084 15.5655 31.2244 16.2937 31.2244 17.1266Z'
           stroke='#F7F7F7'

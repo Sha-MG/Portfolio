@@ -1,10 +1,20 @@
 import { VStack } from '@chakra-ui/react';
 
-export default function SpaceIcon() {
+interface SpaceIconProps {
+  disabled?: boolean;
+  onClick?: () => void;
+}
+
+export default function SpaceIcon({ disabled, onClick }: SpaceIconProps) {
   return (
     <VStack
-      _hover={{ transform: 'scale(1.5)', cursor: 'pointer' }}
-      transition='all 0.2s'
+      transform={{ base: 'scale(0.6)', md: 'scale(0.7)' }}
+      _hover={{
+        transform: { base: 'scale(0.7)', md: 'scale(0.8)' },
+        cursor: 'pointer',
+      }}
+      transition='all 0.3s'
+      onClick={onClick}
     >
       <svg
         width='40'
@@ -13,7 +23,12 @@ export default function SpaceIcon() {
         fill='none'
         xmlns='http://www.w3.org/2000/svg'
       >
-        <circle cx='30' cy='30' r='30' fill='#666BA2' />
+        <circle
+          cx='30'
+          cy='30'
+          r='30'
+          fill={disabled ? '#CCCCCC' : '#666BA2'}
+        />
         <mask id='path-2-inside-1_121_180' fill='white'>
           <path
             fill-rule='evenodd'

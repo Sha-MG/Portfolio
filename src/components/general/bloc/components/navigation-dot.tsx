@@ -66,7 +66,7 @@ export default function NavigationDot({
             size={3}
             ml={1}
             transition='all 0.3s ease-in-out'
-            _hover={{ transform: 'scale(0.7)', cursor: 'pointer' }}
+            _hover={{ transform: 'scale(0.9)', cursor: 'pointer' }}
           />
           <Text
             opacity={isHovered ? 1 : 0}
@@ -99,7 +99,7 @@ export default function NavigationDot({
             bg={color ?? `bloc${currentBloc}.navigation`}
             size={4}
             transition='all 0.3s ease-in-out'
-            _hover={{ transform: 'scale(0.7)', cursor: 'pointer' }}
+            _hover={{ transform: 'scale(0.9)', cursor: 'pointer' }}
           />
         </>
       )}

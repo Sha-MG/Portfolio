@@ -8,7 +8,7 @@ export default function Node1() {
       first
       title='nockee'
       isWork
-      postName='Dévellopeuse web frontend'
+      postName='Développeuse web frontend'
       date='Mars 2023 - Sept 2023'
       margeTop={0}
       description={

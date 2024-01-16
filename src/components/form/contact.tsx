@@ -7,6 +7,7 @@ import {
   Center,
   FormLabel,
   Input,
+  Link,
   Stack,
   Text,
   Textarea,
@@ -15,10 +16,12 @@ import {
 import emailjs from '@emailjs/browser';
 
 import Bloc from '../general/bloc/bloc';
+import FeaturedIcon from '../general/icons/features/featured-icon';
 import MushroomIcon from '../general/icons/forest/mushroom';
 import BeachIcon from '../general/icons/sea/beach';
 import PlanetIcon from '../general/icons/space/planet';
 import RocketIcon from '../general/icons/space/rocket';
+import LinkIcon from '../general/icons/technologies/link';
 import Logo from '../illustration/logo';
 
 export const Contact = () => {
@@ -96,6 +99,19 @@ export const Contact = () => {
     >
       <Center>
         <Stack spacing={8} w='full' color='#F7F7F7'>
+          <Center>
+            <Link
+              href='https://www.linkedin.com/in/morgane-gamory/'
+              target='_blank'
+            >
+              <Stack>
+                <Center>
+                  <LinkIcon />
+                </Center>
+                <Text fontSize='xs'>Linkedin</Text>
+              </Stack>
+            </Link>
+          </Center>
           {notification && (
             <Text color='green.100' fontSize='large' fontWeight='extrabold'>
               {notification}

@@ -27,38 +27,26 @@ export default function Portfolio() {
       mainColor='#C283A8'
       content={
         <Stack textAlign='justify' spacing={4}>
+          <Text>Bienvenue dans mon Portfolio ! </Text>
           <Text>
-            Mon stage de fin d'étude chez Nockee a été une plongée passionnante
-            au cœur d'une startup innovante, redéfinissant la gestion locative
-            immobilière de manière dynamique et originale à travers son logiciel
-            en tant que service (SaaS). Ce dernier intègre une gamme complète de
-            fonctionnalités, de la multi-diffusion d'annonces au suivi des
-            candidatures, en passant par la gestion des visites et une
-            application dédiée à la gestion des états des lieux.
+            Explorez un monde où la technologie rencontre l'art. Mon Portfolio,
+            soigneusement développé en React et façonné avec créativité sur
+            Figma, est bien plus qu'une simple collection de projets. C'est une
+            expression de ma passion pour l'alliance entre la programmation et
+            le design. Chaque ligne de code et chaque pixel ont été choisis avec
+            soin pour créer une expérience immersive.
           </Text>
           <Text>
-            Au cours de cette expérience, j'ai eu l'opportunité de contribuer au
-            développement de fonctionnalités captivantes, notamment la création
-            d'un espace dédié aux locataires. Ce dernier offre une expérience
-            immersive avec une timeline en temps réel, permettant aux locataires
-            de suivre l'avancement de leur demande de location de manière
-            transparente. Next.js, Chakra UI et React forment ensemble une stack
-            de base très solide. J'ai aussi pu maîtriser des librairies moins
-            connues mais tout autant utiles et efficaces telles que SWR et React
-            Hook Form.
+            La puissance de React offre une navigation fluide, tandis que le
+            design élaboré sur Figma ajoute une touche artistique à chaque
+            détail. Laissez-vous guider à travers mes projets, où l'innovation
+            technique se marie à une esthétique artistique.
           </Text>
           <Text>
-            La seconde facette importante de ce stage fu l'approfondissement de
-            mon intérêt pour l'UX/UI design. La découverte du logiciel Figma m'a
-            permis d'apprendre à concevoir des interfaces élégantes et
-            intuitive.
-          </Text>
-          <Text>
-            Pour finir, j'ai eu la chance d'avoir comme cadre Station F, plus
-            grand incubateur de startups au monde. Cette expérience a été un
-            tourbillon d'énergie créative. J'ai été immergé dans une atmosphère
-            ultra-dynamique et stimulante. Cette expérience m'a réellement donné
-            envie de travailler dans ce type d'environnement.
+            Ce Portfolio est le reflet de mon engagement envers la création
+            d'expériences uniques et visuellement captivantes. Explorez,
+            découvrez, et n'hésitez pas à me contacter pour partager vos
+            impressions ou discuter de futures collaborations.
           </Text>
         </Stack>
       }

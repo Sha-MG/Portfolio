@@ -1,27 +1,6 @@
-import { CgMenu } from 'react-icons/cg';
-
 import useMobile from '@/hooks/useMobile';
-import { useTheme } from '@/pages';
-import forest from '@/theme/ColorTheme/forest';
-import sea from '@/theme/ColorTheme/sea';
-import space from '@/theme/ColorTheme/space';
-import {
-  Box,
-  BoxProps,
-  HStack,
-  Icon,
-  IconButton,
-  Menu,
-  MenuButton,
-  MenuList,
-  Text,
-  useDisclosure,
-  VStack,
-} from '@chakra-ui/react';
+import { BoxProps, VStack } from '@chakra-ui/react';
 
-import ForestIcon from '../../icons/forest-icon';
-import SeaIcon from '../../icons/sea-icon';
-import SpaceIcon from '../../icons/space-icon';
 import NavigationDot from './navigation-dot';
 
 interface NavigationProps extends BoxProps {
@@ -35,72 +14,22 @@ export default function Navigation({
   ...restProps
 }: NavigationProps) {
   const isMobile = useMobile();
-  const { changeTheme } = useTheme();
-  const { onOpen, onClose, isOpen } = useDisclosure();
 
   return (
-    <Box
+    <VStack
       position='absolute'
       zIndex={50}
       top={20}
       {...(isMobile ? { left: 2 } : { right: 6 })}
       h='fit-content'
       w='fit-content'
+      alignItems='flex-end'
+      spacing={10}
       {...restProps}
     >
-      <HStack justifyContent={isMobile ? 'flex-start' : 'flex-end'} mb={5}>
-        <Menu isOpen={isOpen} onOpen={onOpen} onClose={onClose}>
-          <MenuButton
-            as={IconButton}
-            aria-label='Options'
-            icon={<Icon as={CgMenu} boxSize={6} />}
-            variant='ghost'
-            color={`bloc${currentBloc}.menu`}
-          />
-          <MenuList p={4} bgColor='primary.50'>
-            <VStack spacing={4} justifyContent='space-between'>
-              <Text pb={4} fontWeight='bold'>
-                Changer de thème
-              </Text>
-              <HStack justifyContent='space-between' w='full' px={12}>
-                <Box
-                  onClick={() => {
-                    changeTheme(space);
-                    onClose();
-                  }}
-                >
-                  <SpaceIcon />
-                </Box>
-                <Text>L'espace</Text>
-              </HStack>
-              <HStack justifyContent='space-between' w='full' px={12}>
-                <Box
-                  onClick={() => {
-                    changeTheme(sea);
-                    onClose();
-                  }}
-                >
-                  <SeaIcon />
-                </Box>
-                <Text>L'océan</Text>
-              </HStack>
-              <HStack justifyContent='space-between' w='full' px={12}>
-                <Box
-                  onClick={() => {
-                    changeTheme(forest);
-                    onClose();
-                  }}
-                >
-                  <ForestIcon />
-                </Box>
-                <Text>La forêt</Text>
-              </HStack>
-            </VStack>
-          </MenuList>
-        </Menu>
-      </HStack>
       <VStack
         spacing={{ base: 1, md: 5 }}
+        pr={2}
         {...(isMobile ? { ml: 2 } : { mr: 2 })}
       >
         <NavigationDot
@@ -140,6 +69,6 @@ export default function Navigation({
           section={5}
         />
       </VStack>
-    </Box>
+    </VStack>
   );
 }

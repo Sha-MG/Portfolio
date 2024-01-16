@@ -22,7 +22,7 @@ export default function Nockee() {
       content={
         <Stack textAlign='justify' spacing={4}>
           <Text>
-            Mon stage de fin d'étude chez Nockee a été une plongée passionnante
+            Mon stage de fin d'études chez Nockee a été une plongée passionnante
             au cœur d'une startup innovante, redéfinissant la gestion locative
             immobilière de manière dynamique et originale à travers son logiciel
             en tant que service (SaaS). Ce dernier intègre une gamme complète de
@@ -42,7 +42,7 @@ export default function Nockee() {
             Hook Form.
           </Text>
           <Text>
-            La seconde facette importante de ce stage fu l'approfondissement de
+            La seconde facette importante de ce stage fut l'approfondissement de
             mon intérêt pour l'UX/UI design. La découverte du logiciel Figma m'a
             permis d'apprendre à concevoir des interfaces élégantes et
             intuitive.

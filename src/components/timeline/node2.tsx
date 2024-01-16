@@ -14,7 +14,7 @@ export default function Node2() {
         <Stack lineHeight={1.2} spacing={4}>
           <Text>Formation de développeur web full stack JavaScript.</Text>
           <Text>
-            Socle commun avec moitié backend (Node.js, express, POstgreSQL ... )
+            Socle commun avec moitié backend (Node.js, express, PostgreSQL ... )
             et moitié frontend (HTML, CSS, javascript). Orientation Front-End
             avec une spécialisation React.
           </Text>
