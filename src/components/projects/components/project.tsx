@@ -40,6 +40,7 @@ interface ProjectProps {
   bigImage?: ResponsiveValue<string | (string & {})> | undefined;
   bgColor?: string;
   bottomBorder?: React.ReactNode;
+  size?: string;
 }
 
 export default function Project({
@@ -53,6 +54,7 @@ export default function Project({
   bigImage,
   bgColor,
   bottomBorder,
+  size,
 }: ProjectProps) {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
@@ -72,7 +74,7 @@ export default function Project({
           {title}
         </Center>
       </Stack>
-      <Drawer onClose={onClose} isOpen={isOpen} size='full'>
+      <Drawer onClose={onClose} isOpen={isOpen} size={size ?? 'full'}>
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton zIndex={3} color='general.black' />
@@ -105,7 +107,7 @@ export default function Project({
                 minH='90vh'
                 justifyContent='space-between'
               >
-                <Stack spacing={10}>
+                <Stack spacing={10} w='full'>
                   <Heading as='h3' size='2xl' color={mainColor}>
                     {title}
                   </Heading>

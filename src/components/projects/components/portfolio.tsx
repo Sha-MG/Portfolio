@@ -28,6 +28,7 @@ export default function Portfolio() {
     <Project
       title='Portfolio'
       mainColor='#C283A8'
+      size='xl'
       content={
         <Stack textAlign='justify' spacing={4}>
           <Text>{t('bloc4.portfolio.text1')}</Text>
@@ -82,21 +83,6 @@ export default function Portfolio() {
               <SatelliteIcon />
             </Box>
             <NarwhalIcon color='#E3A591' />
-            <Box pb={4}>
-              <Leaf2Icon color='#F0C273' />
-            </Box>
-            <PlanetIcon />
-            <Box pb={4}>
-              <SeahorseIcon color='#E3A591' />
-            </Box>
-            <MushroomIcon color='#F0C273' />
-            <Box pb={4}>
-              <MeteoriteIcon />
-            </Box>
-            <AnchorIcon color='#E3A591' />
-            <Box pb={4}>
-              <TreeIcon color='#F0C273' />
-            </Box>
           </HStack>
         )
       }

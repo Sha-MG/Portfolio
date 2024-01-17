@@ -114,11 +114,13 @@ export const Contact = () => {
               </Stack>
             </Link>
           </Center>
-          {notification && (
-            <Text color='green.100' fontSize='large' fontWeight='extrabold'>
-              {notification}
-            </Text>
-          )}
+          <Center>
+            {notification && (
+              <Text color='green.100' fontSize='large' fontWeight='extrabold'>
+                {t('bloc5.notification')}
+              </Text>
+            )}
+          </Center>
           <VStack w='container.xs' alignSelf='center' spacing={0}>
             <FormLabel
               color={

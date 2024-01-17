@@ -17,10 +17,10 @@ export default function DownloadButton({ color }: DownloadButtonProps) {
       <Link
         href={
           activeColorTheme.id === 'forest'
-            ? '/forest.pdf'
+            ? '/Morgane-Gamory-CV-f.pdf'
             : activeColorTheme.id === 'sea'
-            ? '/sea.pdf'
-            : '/space.pdf'
+            ? '/Morgane-Gamory-CV_m.pdf'
+            : '/Morgane-Gamory-CV_s.pdf'
         }
         download='Morgane-Gamory-CV'
         target='_blank'

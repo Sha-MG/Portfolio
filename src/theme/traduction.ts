@@ -12,7 +12,7 @@ i18n
             dev: 'Front-end web developer',
             years: '28 years old',
             resume1: 'Hi, I’m Morgane,',
-            resume2: `A web & mobile developer with a diverse background and an insatiable thirst for knowledge. I juggle between web development and design, aiming to evoke emotions, create beauty, and interact with the world. I am a lover of learning, a true curious spirit, and every challenge is an opportunity for me to excel. Creativity runs in my veins, and art is an integral part of my life. Recently, I completed an internship at`,
+            resume2: `A web & mobile developer with a diverse background and an insatiable thirst for knowledge. I juggle between web development and design, aiming to evoke emotions, create beauty, and interact with the world. As a true curious mind, i love learning new things, and every challenge is an opportunity for me to excel. Creativity runs in my veins, and art is an integral part of my life. Recently, I completed an internship at`,
             resume3: ', an innovative startup at ',
             resume4: `, confirming my passion for web development and my interest in the highly stimulating world of startups.`,
             passions: 'My passions',
@@ -94,6 +94,7 @@ i18n
             message: 'Message',
             bottom: `I designed, illustrated and developed this portfolio with ❤️`,
             envoyer: 'Send',
+            notification: 'Your message has been sent successfully!',
           },
         },
       },
@@ -107,8 +108,7 @@ i18n
             resume2: `Une développeuse web & mobile avec un parcours riche et une soif
             insatiable de connaissances. Je jongle avec le développement web et le
             design, en cherchant à susciter des émotions, créer du beau, et
-            interagir avec le monde. Je suis une amoureuse de l'apprentissage, une
-            vraie curieuse, et chaque défi est une occasion de me surpasser. La
+            interagir avec le monde. Vraie curieuse, j'aime apprendre, et chaque défi est une occasion de me surpasser. La
             créativité coule dans mes veines, et l'art fait partie intégrante de ma
             vie. Récemment, j'ai fait un stage chez`,
             resume3: `, une startup innovante à `,
@@ -214,6 +214,7 @@ i18n
             message: 'Message',
             bottom: `J'ai créé le design, les illustrations et le développement de ce portfolio avec ❤️`,
             envoyer: 'Envoyer',
+            notification: 'Votre message a bien été envoyé !',
           },
         },
       },
