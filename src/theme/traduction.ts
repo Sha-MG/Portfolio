@@ -105,14 +105,14 @@ i18n
             dev: 'Développeuse web front-end',
             years: '28 ans',
             resume1: 'Salut, moi c’est Morgane,',
-            resume2: `Une développeuse web & mobile avec un parcours riche et une soif
-            insatiable de connaissances. Je jongle avec le développement web et le
+            resume2: `Une développeuse web & mobile avec un parcours riche et une grande soif
+            de connaissances. Je jongle avec le développement web et le
             design, en cherchant à susciter des émotions, créer du beau, et
             interagir avec le monde. Vraie curieuse, j'aime apprendre, et chaque défi est une occasion de me surpasser. La
             créativité coule dans mes veines, et l'art fait partie intégrante de ma
             vie. Récemment, j'ai fait un stage chez`,
             resume3: `, une startup innovante à `,
-            resume4: `, qui a confirmé ma passion pour le développement web et mon intérêt pour l'univers très stimulant des startups.`,
+            resume4: `, qui a confirmé ma passion pour le développement web et mon intérêt pour l'univers stimulant des startups.`,
             passions: 'Mes passions',
             download: 'Télécharger mon CV',
             peinture: 'La peinture',
@@ -206,6 +206,10 @@ i18n
               text2: `Explorez un monde où la technologie rencontre l'art. Mon Portfolio, soigneusement développé en React et façonné avec créativité sur Figma, est bien plus qu'une simple collection de projets. C'est une expression de ma passion pour l'alliance entre la programmation et le design. Chaque ligne de code et chaque pixel ont été choisis avec soin pour créer une expérience immersive.`,
               text3: `La puissance de React offre une navigation fluide, tandis que le design élaboré sur Figma ajoute une touche artistique à chaque détail. Laissez-vous guider à travers mes projets, où l'innovation technique se marie à une esthétique artistique.`,
               text4: `Ce Portfolio est le reflet de mon engagement envers la création d'expériences uniques et visuellement captivantes. Explorez, découvrez, et n'hésitez pas à me contacter pour partager vos impressions ou discuter de futures collaborations.`,
+            },
+            questya: {
+              text1: `Créé pour postuler à une offre d'emplois, ce site vous invite à poursuivre une petite quête. Vous voilà dans la peau d'un recruteur, votre but est de trouver votre candidate idéale.`,
+              text2: `Ce petit jeu a été l'occasion de m'amuser avec les animations et de créer un site original et ludique. J'ai pu découvrir quelques utilisations de css et m'amuser autour d'interactions originales. `,
             },
           },
           bloc5: {

@@ -43,7 +43,7 @@ interface ProjectProps {
   size?: string;
 }
 
-export default function Project({
+export default function xProject({
   title,
   content,
   mainColor,
@@ -118,9 +118,9 @@ export default function Project({
                   >
                     {content}
                     <Stack>
-                      {link ||
-                        (googlePlayLink && (
-                          <Stack spacing={6}>
+                      <Stack spacing={6}>
+                        {link && (
+                          <>
                             <Center>
                               <Heading as='h4' fontSize='lg' color={mainColor}>
                                 Liens
@@ -150,8 +150,9 @@ export default function Project({
                                 </Link>
                               )}
                             </HStack>
-                          </Stack>
-                        ))}
+                          </>
+                        )}
+                      </Stack>
                       <Stack spacing={6} minW='10vw'>
                         <Center>
                           <Heading as='h4' fontSize='lg' color={mainColor}>

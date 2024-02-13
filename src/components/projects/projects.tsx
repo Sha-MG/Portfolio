@@ -9,6 +9,7 @@ import SeahorseIcon from '../general/icons/sea/seahorse';
 import MoonIcon from '../general/icons/space/moon';
 import Nockee from './components/nockee';
 import Portfolio from './components/portfolio';
+import Questya from './components/questya';
 
 export default function Projects() {
   const { activeColorTheme } = useTheme();
@@ -47,6 +48,7 @@ export default function Projects() {
       <HStack px={40} py={10} justifyContent='center' wrap='wrap' spacing={10}>
         <Nockee />
         <Portfolio />
+        <Questya />
       </HStack>
       <Center alignItems='flex-end' pt={10}>
         <VStack spacing={0}>
